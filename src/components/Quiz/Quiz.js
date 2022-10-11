@@ -1,11 +1,16 @@
 import React from 'react';
 import {Card, Button } from 'react-bootstrap';
-import { Link, useLoaderData, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Quiz = ({ quiz }) => {
     //console.log(quiz);
     const { name, logo, total, id } = quiz;
 
+    const navigate = useNavigate();
+
+    const handleQuiz = () =>{
+        navigate(`/quiz/${id}`);
+    }
 
     return (
 
@@ -15,7 +20,7 @@ const Quiz = ({ quiz }) => {
                 <Card.Body className="text-white">
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>Total Quizzes: <b>{total}</b></Card.Text>
-                    <Link to={`/quiz/${id}`}>Quiz Details</Link>
+                    <Button onClick={handleQuiz}>Quiz Details</Button>
                 </Card.Body>
             </Card>
         </div>
