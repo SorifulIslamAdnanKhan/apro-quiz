@@ -1,8 +1,12 @@
 import React from 'react';
 import {Card, Button } from 'react-bootstrap';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 
 const Quiz = ({ quiz }) => {
-    const { name, logo, total } = quiz;
+    //console.log(quiz);
+    const { name, logo, total, id } = quiz;
+
+
     return (
 
         <div>
@@ -11,7 +15,7 @@ const Quiz = ({ quiz }) => {
                 <Card.Body className="text-white">
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>Total Quizzes: <b>{total}</b></Card.Text>
-                    <Button>Quiz Details</Button>
+                    <Link to={`/quiz/${id}`}>Quiz Details</Link>
                 </Card.Body>
             </Card>
         </div>
