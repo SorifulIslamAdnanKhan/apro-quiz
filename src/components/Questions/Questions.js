@@ -10,12 +10,16 @@ const Questions = ({ quizs }) => {
 
     const handleAns = (option) => {
         if (option === correctAnswer) {
-            toast.success(`${correctAnswer}`)
+            toast.success('Answer is correct!')
         }
         else {
-            toast.error('This is not a valid ans!')
+            toast.error('This is not a valid answer!')
         }
 
+    }
+
+    const handleCorrectAns = () =>{
+        toast.success(`${correctAnswer}`);
     }
 
     return (
@@ -24,7 +28,7 @@ const Questions = ({ quizs }) => {
             <ToastContainer></ToastContainer>
             <div className="bg-secondary">
                 <div>
-                    <FontAwesomeIcon className="eye-icon" icon={faEye} />
+                    <FontAwesomeIcon onClick={handleCorrectAns} className="eye-icon" icon={faEye} />
                 </div>
                 <br />
                 <div className="text-white">
