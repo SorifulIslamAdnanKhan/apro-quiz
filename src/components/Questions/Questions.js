@@ -42,7 +42,7 @@ const Questions = ({ quizzes, index }) => {
                                         <Card.Body className="text-white">
                                             <Card.Text>
                                                 <label htmlFor="">
-                                                    <input onClick={() => handleAns(option)} type="radio" name="quiz" />
+                                                    <input onClick={() => handleAns(option)} type="radio" name={option.id} />
                                                 </label>
                                             </Card.Text>
                                             <Card.Text>
