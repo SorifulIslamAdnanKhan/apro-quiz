@@ -3,8 +3,7 @@ import './ChartData.css';
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
 const ChartData = ({ chartData }) => {
-    
-    console.log(chartData)
+
     return (
         <div>
             <div className="chart">

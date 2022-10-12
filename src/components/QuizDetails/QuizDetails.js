@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Container, Row, } from 'react-bootstrap';
+import React from 'react';
+import { Container, Row } from 'react-bootstrap';
 import { useLoaderData } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import Questions from '../Questions/Questions';
@@ -7,17 +7,13 @@ import Questions from '../Questions/Questions';
 const QuizDetails = () => {
 
     const quiz = useLoaderData();
-    //console.log(quiz);
-    const { name} = quiz.data;
+    const {name} = quiz.data;
 
-    //const [totalCorrectAnswers, settotalCorrectAnswers] = useState(0);
-     
     return (
         <Container>
             <Row xs={1} md={1} className="mt-4 p-2 m-auto">
                 <div>
                     <h3>Quiz For: {name}</h3>
-                    <h5>Total Quiz: {}</h5>
                 </div>
             </Row>
             {
@@ -25,7 +21,6 @@ const QuizDetails = () => {
                     key={quizzes.id}
                     quizzes={quizzes}
                     index={index}
-                   // totalCorrectAnswers={settotalCorrectAnswers(totalCorrectAnswers)}
                     ></Questions>
                 )
             }

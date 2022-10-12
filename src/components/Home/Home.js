@@ -11,7 +11,6 @@ const Home = () => {
             <Hero></Hero>
             <Container>
                 <Row xs={1} md={2} className="g-4 mt-4">
-
                     {
                         quizzes.data.map(quiz => <Quiz
                             key={quiz.id}
