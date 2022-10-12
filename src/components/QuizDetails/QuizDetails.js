@@ -4,15 +4,10 @@ import { useLoaderData } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import Questions from '../Questions/Questions';
 
-
 const QuizDetails = () => {
+
     const quiz = useLoaderData();
-
     const { name} = quiz.data;
-
-    //quiz.data.questions.map(qus => qus.question);
-
-    console.log(quiz.data.questions);
      
     return (
         <Container>
@@ -29,9 +24,6 @@ const QuizDetails = () => {
                     ></Questions>
                 )
             }
-               
-                
-            
         </Container>
     );
 };

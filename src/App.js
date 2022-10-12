@@ -6,7 +6,6 @@ import Statistic from './components/Statistic/Statistic';
 import Blog from './components/Blog/Blog';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import QuizDetails from './components/QuizDetails/QuizDetails';
-import Quiz from './components/Quiz/Quiz';
 
 function App() {
 
@@ -30,6 +29,7 @@ function App() {
         },
         {
           path: '/statistic',
+          loader: async () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Statistic></Statistic>,
         },
         {
