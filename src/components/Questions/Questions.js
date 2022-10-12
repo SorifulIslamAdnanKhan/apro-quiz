@@ -4,9 +4,9 @@ import { toast, ToastContainer } from "react-toastify";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 
-const Questions = ({ quizs }) => {
-    console.log(quizs);
-    const { question, correctAnswer } = quizs;
+const Questions = ({ quizzes, index }) => {
+    //console.log(quizzes);
+    const { question, correctAnswer } = quizzes;
 
     const handleAns = (option) => {
         if (option === correctAnswer) {
@@ -23,7 +23,6 @@ const Questions = ({ quizs }) => {
     }
 
     return (
-
         <Row xs={1} md={1} className="mt-4 p-4 g-4 bg-secondary">
             <ToastContainer></ToastContainer>
             <div className="bg-secondary">
@@ -32,11 +31,11 @@ const Questions = ({ quizs }) => {
                 </div>
                 <br />
                 <div className="text-white">
-                    <h4>{question}</h4>
+                    <h4><b>{index+1}</b>{question}</h4>
                     <br />
                     <Row xs={1} md={2} className="g-4 mt-4">
                         {
-                            quizs.options.map(option =>
+                            quizzes.options.map(option =>
 
                                 <div>
                                     <Card className="bg-dark">

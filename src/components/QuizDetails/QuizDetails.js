@@ -18,9 +18,10 @@ const QuizDetails = () => {
                 </div>
             </Row>
             {
-                quiz.data.questions.map(quizs => <Questions
-                    key={quizs.id}
-                    quizs={quizs}
+                quiz.data.questions.map((quizzes,index)=> <Questions
+                    key={quizzes.id}
+                    quizzes={quizzes}
+                    index={index}
                     ></Questions>
                 )
             }
