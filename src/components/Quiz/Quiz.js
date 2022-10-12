@@ -1,6 +1,7 @@
 import React from 'react';
-import {Card, Button } from 'react-bootstrap';
+import {Card, Button, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import './Quiz.css';
 
 const Quiz = ({ quiz }) => {
 
@@ -16,12 +17,19 @@ const Quiz = ({ quiz }) => {
 
         <div>
             <Card className="bg-dark">
-                <Card.Img variant="top" src={logo} />
-                <Card.Body className="text-white">
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>Total Quizzes: <b>{total}</b></Card.Text>
-                    <Button onClick={handleQuiz}>Quiz Details</Button>
-                </Card.Body>
+                <Row md={2}>
+                    <div>
+                        <Card.Img variant="top" src={logo} />
+                    </div>
+                    <div className="text-white card-body">    
+                        <Card.Body>
+                            <Card.Title>{name}</Card.Title>
+                            <Card.Text>Total Quizzes: <b>{total}</b></Card.Text>
+                            <Button onClick={handleQuiz}>Quiz Details</Button>
+                        </Card.Body>
+                    </div>
+                    
+                </Row>
             </Card>
         </div>
 

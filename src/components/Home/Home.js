@@ -9,7 +9,6 @@ const Home = () => {
     return (
         <div>
             <Hero></Hero>
-
             <Container>
                 <Row xs={1} md={2} className="g-4 mt-4">
 
@@ -21,7 +20,6 @@ const Home = () => {
                     }
                 </Row>
             </Container>
-
         </div>
     );
 };
